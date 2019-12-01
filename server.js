@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 const mongoose = require('./db/connection.js');
-const Todo = require('./models/todo.js');
-const todoSeed = require('./models/seed.js')
 const methodOverride = require('method-override');
 // const Port = process.env.PORT || 4545
 // const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/basiccrud'
@@ -21,4 +19,7 @@ mongoose.connection.once('open', () => {
 })
 const Todo = require('./models/Todo.js');
 
-const todoController = require('./controllers/todo.js');
+const todoController = require('./controller/todo.js');
+
+
+app.listen(4545, () => console.log('server is running'));
