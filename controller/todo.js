@@ -4,8 +4,8 @@ const router = express.Router();
 const Todo = require('../models/Todo.js');
 
 router.get('/', (req, res) => {
-  Restaurant.find({}).then(restaurants => {
-    res.render('todo/Index', { restaurants });
+  Restaurant.find({}).then(todo => {
+    res.render('todo/Index', { todo });
   });
 });
 
